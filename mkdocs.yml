@@ -1,0 +1,57 @@
+site_name: Endrpi Docs
+site_description: Endpoints for the Raspberry Pi
+site_author: Persanix LLC
+site_dir: out
+repo_url: https://github.com/persanix-llc/endrpi-server
+copyright: Copyright &copy; 2021 Persanix LLC. All rights reserved.
+edit_uri: '/persanix-llc/endrpi-docs/main/docs'
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/persanix_llc
+      name: Persanix LLC Twitter
+    - icon: fontawesome/brands/github
+      link: https://github.com/persanix-llc
+      name: Persanix LLC Github
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/persanix_llc
+      name: Persanix LLC Instagram
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - admonition
+    - attr_list
+    - abbr
+    - pymdownx.snippets
+    - def_list
+    - pymdownx.keys
+    - pymdownx.tabbed
+    - pymdownx.superfences
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+theme:
+  name: material
+  language: en
+  font: false
+  logo: https://assets.persanix.com/endrpi/icon/light@1x.png
+  favicon: https://assets.persanix.com/endrpi/icon/color@0.25x.png
+  features:
+    - navigation.instant
+  plugins:
+    - search
+nav:
+- Welcome: index.md
+- Installation: installation.md
+- Running the Server: running_the_server.md
+- API:
+  - REST API: rest_api.md
+  - Web Socket API: websocket_api.md
+- Advanced Setup:
+  - Installing Nginx: installing_nginx.md
+  - Reverse Proxy: reverse_proxy.md
+  - SSL/TLS: ssl_tls.md
+- Community: community.md
+- Legal: legal.md

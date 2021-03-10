@@ -1,0 +1,31 @@
+[build]
+    publish = "out/"
+    command = "mkdocs build"
+    environment = { PYTHON_VERSION = "3.7" }
+
+[[headers]]
+    for = "/*"
+    [headers.values]
+        Content-Security-Policy = '''
+            default-src 'none';
+            script-src 'self';
+            font-src 'self';
+            style-src 'self';
+            img-src 'self' https://assets.persanix.com;
+            media-src 'self' https://assets.persanix.com;
+            manifest-src 'self';
+            frame-ancestors 'none';
+            base-uri 'self';
+            form-action 'self';
+            '''
+        X-Frame-Options = "DENY"
+        X-XSS-Protection = "1; mode=block"
+        X-Content-Type-Options = "nosniff"
+        Referrer-Policy = "strict-origin-when-cross-origin"
+        Feature-Policy = '''
+            geolocation 'none';
+            microphone 'none';
+            camera 'none';
+            payment 'none';
+            document-domain 'none';
+            '''
