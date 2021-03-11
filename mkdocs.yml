@@ -10,7 +10,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/persanix_llc
+      link: https://twitter.com/persanixllc
       name: Persanix LLC Twitter
     - icon: fontawesome/brands/github
       link: https://github.com/persanix-llc
