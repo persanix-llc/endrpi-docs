@@ -6,7 +6,7 @@
 [endrpi-server-github-issue]: https://github.com/persanix-llc/endrpi-server/issues
 [endrpi-server-github-requirements]: https://github.com/persanix-llc/endrpi-server/blob/main/requirements.txt
 
-[twitter]: https://twitter.com/persanix_llc
+[twitter]: https://twitter.com/persanixllc
 [instagram]: https://www.instagram.com/persanix_llc
 
 [raspberry-pi-org]: https://raspberrypi.org
