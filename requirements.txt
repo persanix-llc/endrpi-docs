@@ -1,2 +1,2 @@
 # Documentation
-mkdocs-material==6.1.7
+mkdocs-material==7.0.6

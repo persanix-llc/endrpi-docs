@@ -4,9 +4,10 @@ site_author: Persanix LLC
 site_dir: out
 repo_url: https://github.com/persanix-llc/endrpi-server
 copyright: Copyright &copy; 2021 Persanix LLC. All rights reserved.
-edit_uri: '/persanix-llc/endrpi-docs/main/docs'
+edit_uri: '/persanix-llc/endrpi-docs/tree/main/docs'
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/admonition_override.css
 extra:
   social:
     - icon: fontawesome/brands/twitter
@@ -24,6 +25,7 @@ markdown_extensions:
     - admonition
     - attr_list
     - abbr
+    - meta
     - pymdownx.snippets
     - def_list
     - pymdownx.keys
@@ -40,8 +42,8 @@ theme:
   favicon: https://assets.persanix.com/endrpi/icon/color@0.25x.png
   features:
     - navigation.instant
-  plugins:
-    - search
+  custom_dir: docs/overrides
+plugins: []
 nav:
 - Welcome: index.md
 - Installation: installation.md

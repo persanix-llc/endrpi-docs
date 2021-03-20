@@ -1,8 +1,14 @@
-!!! danger "No authentication"
-    The endpoints described below **are not** authenticated
+---
+description: 
+    Learn about Endrpi's fully documented, RESTful web API that can be used to read various system statuses 
+    and control GPIO pin configurations on the Raspberry Pi®.   
+---
+
+!!! danger ":material-lightning-bolt: No authentication"
+    The endpoints described below are **not authenticated**
     and should only be used on a secure, private LAN.  
 
-!!! info "GPIO Mocking"
+!!! info ":material-information-outline: GPIO Mocking"
     GPIO interaction is mocked when Endrpi is run on non-rpi systems for the purpose of testing.
 
 ## Prerequisites

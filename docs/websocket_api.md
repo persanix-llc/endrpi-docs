@@ -1,15 +1,26 @@
-!!! danger "No authentication"
-    The endpoints described below **are not** authenticated
+---
+description: 
+    Learn about Endrpi's low-latency WebSocket endpoint that mirrors the REST API and
+    can be used to read various system statuses on the Raspberry Pi®.
+---
+
+!!! danger ":material-lightning-bolt: No authentication"
+    The endpoints described below are **not authenticated**
     and should only be used on a secure, private LAN.  
 
-!!! info "GPIO Mocking"
+!!! info ":material-information-outline: GPIO Mocking"
     GPIO interaction is mocked when Endrpi is run on non-rpi systems for the purpose of testing.
+
+## Prerequisites
+
+1. [Installation](installation.md)
+2. [Running the server](running_the_server.md)
 
 ## Overview
 
-The web socket API provides clients with a low-latency, persistent connection to the Endrpi server.
+The WebSocket API provides clients with a low-latency, persistent connection to the Endrpi server.
 
-Most of the web socket API requires a client to send a JSON message in order to receive a response.
+Most of the WebSocket API requires a client to send a JSON message in order to receive a response.
 The message the client sends must contain a specified action and, if required by the action, 
 a set of parameters.
 
@@ -38,23 +49,23 @@ will return the following response:
 }
 ```
 
-Every web socket message that Endrpi sends to a client will contain a stable action identifier 
+Every WebSocket message that Endrpi sends to a client will contain a stable action identifier 
 (i.e. `GET_TEMPERATURE` in the above example).
 This way, a client can parse message content by looking at what action was performed to generate the message.
 
 #### Active vs. Passive Actions
 
-Most of the web socket API is based on the request/response pattern.
+Most of the WebSocket API is based on the request/response pattern.
 Clients request an action to be performed, such as "measure the system temperature", in which case Endrpi will
 respond with a message containing the result of the action (i.e. the temperature).
 These actions are considered *active*.
 
-Conversely, a *passive* web socket action can send messages to clients at any time without any input.
-Passive messages are not part of the web socket API yet.
+Conversely, a *passive* WebSocket action can send messages to clients at any time without any input.
+Passive messages are not part of the WebSocket API yet.
 
 #### Parameters
 
-Some active web socket actions require additional parameters to be sent with the request message.
+Some active WebSocket actions require additional parameters to be sent with the request message.
 These parameters are placed in the `params` field of the outgoing message.
 
 The following message specifies both an action and a set of parameters:
@@ -95,10 +106,10 @@ which will result in the following response:
 === "JavaScript"
 
     ```javascript
-    // Open a new web socket connection (note the 'ws' protocol)
+    // Open a new WebSocket connection (note the 'ws' protocol)
     const webSocket = new WebSocket('ws://localhost:5000');
 
-    // Create a new message to send to the web socket
+    // Create a new message to send to the WebSocket
     const data = { 'action': 'READ_TEMPERATURE' };
     const message = JSON.stringify(data);
 
@@ -114,7 +125,7 @@ which will result in the following response:
 
 ## Actions
 
-The supported web socket actions are categorized by their REST counterpart.
+The supported WebSocket actions are categorized by their REST counterpart.
 
 ##### System
 
@@ -135,7 +146,7 @@ The supported web socket actions are categorized by their REST counterpart.
 
 ## Responses
 
-Web socket responses will always be wrapped in the following data structure:
+WebSocket responses will always be wrapped in the following data structure:
 
 | Field     | Type             | Description                                           |
 | --------- | ---------------- | ----------------------------------------------------- |

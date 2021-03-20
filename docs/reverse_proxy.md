@@ -1,4 +1,10 @@
-!!! warning "Changing Defaults"
+---
+description: 
+    Configure Nginx® as a reverse proxy to serve static content, such as web apps, from a Raspberry Pi®.
+    Nginx® can also proxy API requests from web apps to the Endrpi server.
+---
+
+!!! attention ":material-alert: Changing Defaults"
     This configuration will proxy **all** HTTP requests for localhost port 80 to Endrpi.
 
 ## Overview
@@ -56,10 +62,10 @@ Requests will now be passed through the proxy:
 
 ## References
 
-1. [Setting up an NGINX web server on a Raspberry Pi :material-open-in-new:][1]{target=_blank rel=noopener}
+1. [Setting up an NGINX web server on a Raspberry Pi® :material-open-in-new:][1]{target=_blank rel=noopener}
     <br>
     raspberrypi.org
-    [Last accessed 03/07/2021]
+    [Last accessed 03/20/2021]
 
 [1]: https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md
 

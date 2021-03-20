@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+<!-- Override page title format to "Endrpi Docs - <page_title>" -->
+{% block htmltitle %}
+    {% set title = config.site_name %}
+    {% if page and page.meta and page.meta.title %}
+        {% set title = title ~ " - " ~ page.meta.title %}
+    {% elif page and page.title and not page.is_homepage %}
+        {% set title = title ~ " - " ~ page.title | striptags %}
+    {% endif %}
+    <title>{{ title }}</title>
+{% endblock %}

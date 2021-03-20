@@ -1,9 +1,15 @@
+---
+description: 
+    Endpoints for Raspberry Pi® (Endrpi) is a web API server for the Raspberry Pi® that provides basic
+    statuses and GPIO controls through a collection of REST and Websocket HTTP endpoints.
+---
+
 ![Endrpi logo](https://assets.persanix.com/endrpi/logo-padded/logo-padded.svg)
 
 # Welcome to the Endrpi Docs
 
-Endpoints for Raspberry Pi (Endrpi) is a web API server for the 
-[Raspberry Pi :material-open-in-new:][raspberry-pi-org]{target=_blank rel=noopener}
+Endpoints for Raspberry Pi® (Endrpi) is a web API server for the 
+[Raspberry Pi® :material-open-in-new:][raspberry-pi-org]{target=_blank rel=noopener}
 that provides basic statuses and GPIO controls through a collection of HTTP endpoints.
 
 Powered by 
@@ -12,7 +18,7 @@ Powered by
 and 
 [others :material-open-in-new:][endrpi-server-github-requirements]{target=_blank rel=noopener}.
 
-!!! attention "Early Stage API"
+!!! attention ":material-alert: Early Stage API"
     Endpoints and features may change significantly in future releases.
 
 ## Features
@@ -30,12 +36,34 @@ and
 ## Requirements
 
 * :material-greater-than-or-equal: Python 3.7
-* :material-greater-than-or-equal: Raspberry Pi 3
+* :material-greater-than-or-equal: Raspberry Pi® 3
     * Compatible with the standard
-      [Raspberry Pi OS :material-open-in-new:][raspberry-pi-org-raspbian]{target=_blank rel=noopener}
+      [Raspberry Pi® OS :material-open-in-new:][raspberry-pi-org-raspbian]{target=_blank rel=noopener}
       image
-    * Previous Raspberry Pi versions may work but have not been verified
-    
+    * Previous Raspberry Pi® versions may work but have not been verified
+
+## Example Request
+
+A complete list of REST endpoints can be found in the locally generated Swagger UI Docs 
+([see installation guide][interactive-docs-installation]{target=_blank rel=noopener}).
+The following request for system temperature returns the temperature of the Raspberry Pi® System on Chip.
+
+###### Request
+```
+GET http://localhost:5000/system/temperature
+```
+
+###### Response
+```json
+{
+  "systemOnChip": {
+      "quantity": 45.622,
+      "prefix": null,
+      "unitOfMeasurement": "CELSIUS"
+  }
+}
+```
+
 ## License
 
 Licensed under the Apache License, Version 2.0.
@@ -51,6 +79,8 @@ YOU REPRESENT AND WARRANT THAT YOU HAVE FULL AUTHORITY TO BIND THE ENTITY THAT Y
 THESE DISCLAIMERS. 
 IF YOU DO NOT AGREE TO THESE DISCLAIMERS AND DO NOT HAVE THE AUTHORITY AS PROVIDED HEREIN, DO NOT ACCESS, OR USE THE PERSANIX™ APPLICATION.
 
+
+[interactive-docs-installation]: /installation/#interactive-api-documentation
 
 --8<-- "docs/includes/abbreviations.md"
 --8<-- "docs/includes/links.md"

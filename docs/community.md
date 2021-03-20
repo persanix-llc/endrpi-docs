@@ -1,3 +1,9 @@
+---
+description: 
+    Become part of the Endrpi community to stay up to date with updates, news, and project ideas.
+    Submit ideas, suggestions, or feedback on the Endrpi repository page.
+---
+
 Endrpi relies on the community for feedback about the project. 
 There are a few different ways to get in touch.
 
@@ -21,10 +27,10 @@ Please try to be as detailed as possible.
 
 #### Contributions
 
-!!! warning "Not Accepted Yet"
+!!! warning ":material-alert: Not Accepted Yet"
     Pull requests are not being accepted until a contribution guideline is established for the repository.
 
-We look forward to your contributions so please check back here for updates soon.
+We look forward to your contributions so please check back for updates.
 
 ## Social Media
 
@@ -37,4 +43,3 @@ for general news and updates.
 
 --8<-- "docs/includes/abbreviations.md"
 --8<-- "docs/includes/links.md"
-

@@ -1,3 +1,9 @@
+---
+description: 
+    Start Endrpi by running a Python script. The interactive REST API docs will be generated automatically
+    and are accessible by other devices on the same LAN as the Raspberry Pi®.
+---
+
 The Endrpi server can be started by running the Python script `endr.py`.
 
 ## Prerequisites
@@ -17,7 +23,7 @@ cd endrpi-server
 ##### 2. Run the server
 
 ```
-python endr.py
+python3 endr.py
 ```
 
 ##### 3. Navigate to the test page
@@ -30,7 +36,7 @@ API documentation is generated locally when Endrpi starts and will be hosted
 at [http://localhost:5000/docs :material-open-in-new:][localhost-port-docs]{target=_blank rel=noopener}.
 
 The API documentation is usually reachable by other devices on the same LAN as the Raspberry Pi.
-Run the command ```ifconfig``` on the Raspberry Pi and use the resulting IP address as the hostname to 
+Run the command ```ifconfig``` on the Raspberry Pi® and use the resulting IP address as the hostname to 
 view the documentation on another computer.
 
 ## Optional arguments
