@@ -1,4 +1,15 @@
-Endrpi can be installed by downloading the source code from Github and then resolving its dependency tree using `pip`.
+---
+description: 
+    Start using Endrpi by downloading the Endrpi source code to a Raspberry Pi®, 
+    installing Python dependencies with pip, and adding a Swagger UI build.
+---
+
+Endrpi can be installed to a Raspberry Pi® by downloading the source code from Github® 
+and then resolving its dependency tree using `pip`.
+
+Interactive API documentation can be enabled by downloading a Swagger UI build.
+
+## Endrpi Source Code
 
 ### :fontawesome-brands-git-alt: Option One: Git clone
 
@@ -17,7 +28,7 @@ cd endrpi-server
 ##### 3. Install dependencies
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### :fontawesome-regular-file-archive: Option Two: Tarball
@@ -42,35 +53,43 @@ cd endrpi-server
 ##### 4. Install dependencies
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Interactive API Documentation
 The interactive API documentation can be installed by adding the latest Swagger UI build to the 
 public directory.
 
+The following commands should be run **outside** the endrpi-server directory, preferably in the home path.
+
 ##### 1. Download the latest release of Swagger UI
 
 ```
-curl https://github.com/swagger-api/swagger-ui/archive/v3.44.1.tar.gz -o swagger-ui.tar.gz
+curl -L https://github.com/swagger-api/swagger-ui/tarball/v3.44.1 -o swagger-ui.tar.gz
 ```
 
-##### 2. Un-tar the tarball
+##### 2. Create swagger-ui directories
 
 ```
-tar -xzf swagger-ui.tar.gz
+mkdir swagger-ui && mkdir endrpi-server/public/swagger-ui
 ```
 
-##### 3. Copy the JavaScript bundle to Endrpi
+##### 3. Un-tar the tarball
 
 ```
-cp -r swagger-ui-3.44.1/dist/swagger-ui-bundle.js endrpi-server/swagger-ui/
+tar -xzf swagger-ui.tar.gz -C ./swagger-ui --strip-components=1
 ```
 
-##### 3. Copy the CSS file to Endrpi
+##### 4. Copy the JavaScript bundle to Endrpi
 
 ```
-cp -r swagger-ui-3.44.1/dist/swagger-ui.css endrpi-server/swagger-ui/
+cp -r swagger-ui/dist/swagger-ui-bundle.js endrpi-server/public/swagger-ui/
+```
+
+##### 5. Copy the CSS file to Endrpi
+
+```
+cp -r swagger-ui/dist/swagger-ui.css endrpi-server/public/swagger-ui/
 ```
 
 
