@@ -17,6 +17,7 @@
             frame-ancestors 'none';
             base-uri 'self';
             form-action 'self';
+            connect-src 'self' https://api.github.com;
             '''
         X-Frame-Options = "DENY"
         X-XSS-Protection = "1; mode=block"
