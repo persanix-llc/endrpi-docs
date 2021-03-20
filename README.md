@@ -11,7 +11,6 @@ The [endrpi-docs](https://github.com/persanix-llc/endrpi-docs) repository contai
 The repository for the endrpi-server can be found at 
 [https://github.com/persanix-llc/endrpi-server](https://github.com/persanix-llc/endrpi-server).
 
-
 ## License
 
 Licensed under the Apache License, Version 2.0.
