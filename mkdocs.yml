@@ -4,7 +4,7 @@ site_author: Persanix LLC
 site_dir: out
 repo_url: https://github.com/persanix-llc/endrpi-server
 copyright: Copyright &copy; 2021 Persanix LLC. All rights reserved.
-edit_uri: '/persanix-llc/endrpi-docs/main/docs'
+edit_uri: '/persanix-llc/endrpi-docs/tree/main/docs'
 extra_css:
   - stylesheets/extra.css
   - stylesheets/admonition_override.css
