@@ -18,20 +18,19 @@ Powered by
 and 
 [others :material-open-in-new:][endrpi-server-github-requirements]{target=_blank rel=noopener}.
 
-!!! attention ":material-alert: Early Stage API"
-    Endpoints and features may change significantly in future releases.
 
 ## Features
 
 #### REST API
 * Reads system statuses such as temperature, memory usage, throttling, etc.
-* Reads/updates GPIO pin state, function, and pull.
-* Generates interactive documentation via 
+* Reads and updates GPIO pin state, function, and pull.
+* Generates interactive API documentation via 
   [Swagger UI :material-open-in-new:][swagger-ui]{target=_blank rel=noopener}.
 
 #### Websocket
-* Maintains a persistent, low-latency connection.
+* Supports a persistent, low-latency WebSocket connection.
 * Mirrors the REST API through a request/response pattern.
+
 
 ## Requirements
 
@@ -42,11 +41,19 @@ and
       image
     * Previous Raspberry Pi® versions may work but have not been verified
 
+
+## Quickstart
+
+```
+pip3 install -U endrpi && endrpi
+```
+
+Endrpi will start running on port 5000; for a list of run options see [Running the Server](running_the_server.md).
+
+
 ## Example Request
 
-A complete list of REST endpoints can be found in the locally generated Swagger UI Docs 
-([see installation guide][interactive-docs-installation]{target=_blank rel=noopener}).
-The following request for system temperature returns the temperature of the Raspberry Pi® System on Chip.
+The following request returns the temperature of the Raspberry Pi® System on Chip.
 
 ###### Request
 ```
@@ -64,11 +71,17 @@ GET http://localhost:5000/system/temperature
 }
 ```
 
+Endrpi generates live, interactive API documentation. 
+A complete list of REST endpoints can be found hosted at
+[localhost:5000/docs][localhost-port-docs]{target=_blank rel=noopener}.
+
+
 ## License
 
 Licensed under the Apache License, Version 2.0.
 
 Copyright &copy; 2020 - 2021 Persanix LLC. All rights reserved.
+
 
 ## Disclaimers
 
