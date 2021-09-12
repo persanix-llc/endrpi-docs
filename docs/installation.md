@@ -1,17 +1,35 @@
 ---
 description: 
-    Start using Endrpi by downloading the Endrpi source code to a Raspberry Pi®, 
-    installing Python dependencies with pip, and adding a Swagger UI build.
+    Start using Endrpi by installing a pip package or downloading the Endrpi source. 
 ---
 
-Endrpi can be installed to a Raspberry Pi® by downloading the source code from Github® 
-and then resolving its dependency tree using `pip`.
+Endrpi can be installed by installing the `endrpi` package or by downloading the source code from Github®.
 
-Interactive API documentation can be enabled by downloading a Swagger UI build.
+For more information about running Endrpi, see [Running the Server](running_the_server.md).
 
-## Endrpi Source Code
 
-### :fontawesome-brands-git-alt: Option One: Git clone
+## :fontawesome-brands-python: Pip
+
+Endrpi is available as a `pip` package which provides the `endrpi` command.
+
+##### 1. Install the endrpi package
+
+```
+pip3 install -U endrpi
+```
+
+##### 2. Run the endrpi command
+
+```
+endrpi
+```
+
+
+## :fontawesome-solid-code: Source Code
+
+Endrpi can be installed and run directly from source code.
+
+#### :fontawesome-brands-git-alt: Option One: Git clone
 
 ##### 1. Clone the main branch of Endrpi
 
@@ -31,7 +49,14 @@ cd endrpi-server
 pip3 install -r requirements.txt
 ```
 
-### :fontawesome-regular-file-archive: Option Two: Tarball
+##### 4. Run the server
+
+```
+python3 endrpi/cli.py
+```
+
+
+#### :fontawesome-regular-file-archive: Option Two: Tarball
 
 ##### 1. Download the tarball using curl
 
@@ -56,40 +81,10 @@ cd endrpi-server
 pip3 install -r requirements.txt
 ```
 
-## Interactive API Documentation
-The interactive API documentation can be installed by adding the latest Swagger UI build to the 
-public directory.
-
-The following commands should be run **outside** the endrpi-server directory, preferably in the home path.
-
-##### 1. Download the latest release of Swagger UI
+##### 5. Run the server
 
 ```
-curl -L https://github.com/swagger-api/swagger-ui/tarball/v3.44.1 -o swagger-ui.tar.gz
-```
-
-##### 2. Create swagger-ui directories
-
-```
-mkdir swagger-ui && mkdir endrpi-server/public/swagger-ui
-```
-
-##### 3. Un-tar the tarball
-
-```
-tar -xzf swagger-ui.tar.gz -C ./swagger-ui --strip-components=1
-```
-
-##### 4. Copy the JavaScript bundle to Endrpi
-
-```
-cp -r swagger-ui/dist/swagger-ui-bundle.js endrpi-server/public/swagger-ui/
-```
-
-##### 5. Copy the CSS file to Endrpi
-
-```
-cp -r swagger-ui/dist/swagger-ui.css endrpi-server/public/swagger-ui/
+python3 endrpi/cli.py
 ```
 
 
