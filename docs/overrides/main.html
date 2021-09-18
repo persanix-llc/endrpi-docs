@@ -10,3 +10,13 @@
     {% endif %}
     <title>{{ title }}</title>
 {% endblock %}
+
+<!-- Override extra head to include Twitter card information -->
+{% block extrahead %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@persanix_llc" />
+  <meta name="twitter:creator" content="@persanix_llc" />
+  <meta name="twitter:title" content="{{ title }}" />
+  <meta name="twitter:description" content="{{ config.site_description }}" />
+  <meta name="twitter:image" content="https://assets.persanix.com/endrpi/logo-padded/logo-padded@2x.png" />
+{% endblock %}
