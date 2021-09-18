@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 
-<!-- Override page title format to "Endrpi Docs - <page_title>" -->
-{% block htmltitle %}
+<!--
+    Override page title format to "Endrpi Docs - <page_title>"
+    Override extra head to include Twitter card information
+-->
+{% block extrahead %}
+
     {% set title = config.site_name %}
     {% if page and page.meta and page.meta.title %}
         {% set title = title ~ " - " ~ page.meta.title %}
     {% elif page and page.title and not page.is_homepage %}
         {% set title = title ~ " - " ~ page.title | striptags %}
     {% endif %}
-    <title>{{ title }}</title>
-{% endblock %}
 
-<!-- Override extra head to include Twitter card information -->
-{% block extrahead %}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@persanix_llc" />
-  <meta name="twitter:creator" content="@persanix_llc" />
-  <meta name="twitter:title" content="{{ title }}" />
-  <meta name="twitter:description" content="{{ config.site_description }}" />
-  <meta name="twitter:image" content="https://assets.persanix.com/endrpi/logo-padded/logo-padded@2x.png" />
+    <title>{{ title }}</title>
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@persanix_llc" />
+    <meta name="twitter:creator" content="@persanix_llc" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ config.site_description }}" />
+    <meta name="twitter:image" content="https://assets.persanix.com/endrpi/logo-padded/logo-padded@2x.png" />
 {% endblock %}
