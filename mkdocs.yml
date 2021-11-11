@@ -38,8 +38,8 @@ theme:
   name: material
   language: en
   font: false
-  logo: https://assets.persanix.com/endrpi/icon/light@1x.png
-  favicon: https://assets.persanix.com/endrpi/icon/color@0.25x.png
+  logo: images/logo-icon-white.png
+  favicon: images/favicon.png
   features:
     - navigation.instant
   custom_dir: docs/overrides

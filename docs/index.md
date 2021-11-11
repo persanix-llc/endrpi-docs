@@ -4,7 +4,7 @@ description:
     statuses and GPIO controls through a collection of REST and Websocket HTTP endpoints.
 ---
 
-![Endrpi logo](https://assets.persanix.com/endrpi/logo-padded/logo-padded.svg)
+![Endrpi logo](images/logo.svg)
 
 # Welcome to the Endrpi Docs
 
