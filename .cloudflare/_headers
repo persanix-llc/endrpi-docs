@@ -1,6 +1,7 @@
 /*
     Content-Security-Policy: base-uri 'self'; connect-src 'self' https://api.github.com; default-src 'none'; font-src 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' https://assets.persanix.com; manifest-src 'self'; media-src 'self' https://assets.persanix.com; script-src 'self'; style-src 'self';
     Feature-Policy: camera 'none'; document-domain 'none'; geolocation 'none'; microphone 'none'; payment 'none';
+    Permissions-Policy: camera=(), document-domain=(), geolocation=(), microphone=(), payment=()
     Referrer-Policy: strict-origin-when-cross-origin
     Strict-Transport-Security: max-age=31536000; includeSubDomains
     X-Content-Type-Options: nosniff
